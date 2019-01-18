@@ -1,11 +1,13 @@
 package com.amatsuka.procedural.iter;
 
 import java.util.Scanner;
+import com.amatsuka.contracts.RunnableExercise;
+
 
 /*
     Написать программу, вычисляющую сумму цифр введённого пользователем целого числа.
  */
-public class ex1_SumOfNumbers {
+public class ex1_SumOfNumbers implements RunnableExercise {
     public void run() {
         Scanner sc = new Scanner(System.in);
 
@@ -16,6 +18,11 @@ public class ex1_SumOfNumbers {
         } catch (NumberFormatException e) {
             System.out.println("Это не число");
         }
+    }
+
+    @Override
+    public String description() {
+        return "Написать программу, вычисляющую сумму цифр введённого пользователем целого числа";
     }
 
     private int sum(final String number) throws NumberFormatException {

@@ -1,5 +1,6 @@
 package com.amatsuka.procedural.func;
 
+import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Dates;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
  * Форматирование строки "День.Месяц.Год" вынести в отдельную функцию.
  */
 
-public class ex1_NextDay {
+public class ex1_NextDay implements RunnableExercise {
 
     private static byte MAX_MONTH_IN_YEAR = 12;
 
@@ -25,6 +26,11 @@ public class ex1_NextDay {
         int year = sc.nextInt();
 
         System.out.println(getNextDayDate(day, month, year));
+    }
+
+    @Override
+    public String description() {
+        return "Вывести дату следующего дня в формате \"День.Месяц.Год\"";
     }
 
     private String getNextDayDate(final int day, final int month, final int year) {

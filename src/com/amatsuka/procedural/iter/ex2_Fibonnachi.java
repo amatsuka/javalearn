@@ -1,6 +1,8 @@
 package com.amatsuka.procedural.iter;
 
 import java.util.Scanner;
+import com.amatsuka.contracts.RunnableExercise;
+
 
 /*
     Написать программу, вычисляющую и отображающую все числа Фибоначчи меньше введённого пользователем целого числа.
@@ -8,7 +10,7 @@ import java.util.Scanner;
     с помощью цикла
     с помощью рекурсии.
  */
-public class ex2_Fibonnachi {
+public class ex2_Fibonnachi implements RunnableExercise {
     public void run() {
         Scanner sc = new Scanner(System.in);
 
@@ -21,6 +23,11 @@ public class ex2_Fibonnachi {
 
         System.out.println("Методом рекурсии");
         System.out.println(recursion(number));
+    }
+
+    @Override
+    public String description() {
+        return "Все числа Фибоначчи меньше введённого пользователем целого числа";
     }
 
     private long recursion(final long userNumber) {

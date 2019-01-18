@@ -1,17 +1,14 @@
 package com.amatsuka.procedural.func;
 
-
+import com.amatsuka.contracts.RunnableExercise;
 import java.util.Arrays;
 import java.util.Scanner;
 
 /*
- * Имеются три числа - день, месяц и год, вводимые пользователем с консоли.
- * Вывести дату следующего дня в формате "День.Месяц.Год".
- * Учесть переход на следующий месяц, а также следующий год.
- * Форматирование строки "День.Месяц.Год" вынести в отдельную функцию.
+ * Проверить влезаютли два прямоугольника в третий
  */
 
-public class ex2_TwoHouse {
+public class ex2_TwoHouse implements RunnableExercise {
 
     private static int WIDTH = 0;
     private static int LENGTH = 1;
@@ -42,6 +39,11 @@ public class ex2_TwoHouse {
         Arrays.sort(place);
 
         System.out.println(checkPlaceForHouses(place, firstHouse, secondHouse));
+    }
+
+    @Override
+    public String description() {
+        return "Проверить влезаютли два прямоугольника в третий";
     }
 
     private boolean checkPlaceForHouses(int[] place,int[] firstHouse,int[] secondHouse) {

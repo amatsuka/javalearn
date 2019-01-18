@@ -2,6 +2,8 @@ package com.amatsuka.procedural.func;
 
 
 import java.util.Scanner;
+import com.amatsuka.contracts.RunnableExercise;
+
 
 /*
     Написать программу, вычисляющую корни квадратного уравнения вида ax² + bx + c = 0,
@@ -12,7 +14,7 @@ import java.util.Scanner;
     функция isZero, определяющая, является ли число нулём
     функция discriminant, вычисляющая дискриминант
  */
-public class ex3_Squares {
+public class ex3_Squares implements RunnableExercise {
     public void run() {
         Scanner sc = new Scanner(System.in);
 
@@ -39,6 +41,11 @@ public class ex3_Squares {
         }
 
 
+    }
+
+    @Override
+    public String description() {
+        return "Написать программу, вычисляющую корни квадратного уравнения";
     }
 
     private  int discriminant(final int a, final int b, final int c) {

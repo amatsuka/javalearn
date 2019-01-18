@@ -12,8 +12,10 @@ package com.amatsuka.procedural.iter;
  */
 
 import java.util.Scanner;
+import com.amatsuka.contracts.RunnableExercise;
 
-public class ex3_Statistics {
+
+public class ex3_Statistics implements RunnableExercise {
     public void run() {
         Scanner sc = new Scanner(System.in);
 
@@ -30,5 +32,10 @@ public class ex3_Statistics {
         }
 
 
+    }
+
+    @Override
+    public String description() {
+        return "Статистика по осадкам за N дней";
     }
 }
