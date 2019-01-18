@@ -17,7 +17,7 @@ public class ex2_Fibonnachi {
         long number = sc.nextLong();
 
         System.out.println("Методом циклов");
-        System.out.println(iteration(number));
+        iteration(number);
 
         System.out.println("Методом рекурсии");
         System.out.println(recursion(number));
@@ -30,17 +30,18 @@ public class ex2_Fibonnachi {
         return recursion(userNumber - 1) + recursion(userNumber - 2);
     }
 
-    private int iteration(final long userNumber) {
-        if (userNumber == 0) return 0;
-        if (userNumber <= 2) return 1;
+    private void iteration(final long userNumber) {
+
+        System.out.println(1);
 
         int prev = 1;
-        int fib;
+        int fib = 2;
+        while ( fib < userNumber) {
+            int a = fib;
+            fib += prev;
+            prev = a;
 
-        for (fib = 2; fib < userNumber; fib += prev) {
-            prev = fib;
+            System.out.println(fib);
         }
-
-        return fib;
     }
 }

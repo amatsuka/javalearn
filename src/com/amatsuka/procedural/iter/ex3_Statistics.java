@@ -24,7 +24,9 @@ public class ex3_Statistics {
 
         for (int i = 0; i < numberOfDays; i++) {
             System.out.println("Введите количество осадков для дня №" + i);
-
+            /**
+             * @TODO
+             */
         }
 
 
