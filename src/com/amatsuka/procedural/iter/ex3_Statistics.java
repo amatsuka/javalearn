@@ -11,6 +11,7 @@ package com.amatsuka.procedural.iter;
     Не использовать массивы!
  */
 
+
 import java.util.Scanner;
 import com.amatsuka.contracts.RunnableExercise;
 
@@ -23,13 +24,22 @@ public class ex3_Statistics implements RunnableExercise {
 
         int numberOfDays = sc.nextInt();
 
+        int sumOfRainFall = 0;
+        int maxRainFall = 0;
 
         for (int i = 0; i < numberOfDays; i++) {
             System.out.println("Введите количество осадков для дня №" + i);
-            /**
-             * @TODO
-             */
+            int input = sc.nextInt();
+
+            sumOfRainFall += input;
+
+            maxRainFall = maxRainFall < input ? input : maxRainFall;
         }
+
+        System.out.println("Количество дней " + numberOfDays);
+        System.out.println("Сумма осадков " + sumOfRainFall);
+        System.out.println("Среднее количество осадков " + sumOfRainFall/numberOfDays);
+        System.out.println("Максимальное количество осадков " + maxRainFall);
 
 
     }
