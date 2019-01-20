@@ -33,4 +33,25 @@ public class Arrays {
 
         return input.stream().mapToInt(i -> i).toArray();
     }
+
+    public static int[] merge(int[] firstArray, int[] secondArray) {
+        ArrayList<Integer> result = new ArrayList<>();
+
+        int index = 0;
+
+        while ((index < firstArray.length) || (index < secondArray.length)) {
+            if (index < firstArray.length) {
+                result.add(firstArray[index]);
+            }
+
+            if (index < secondArray.length) {
+                result.add(secondArray[index]);
+            }
+
+            index++;
+        }
+
+        return result.stream().mapToInt(i -> i).toArray();
+
+    }
 }

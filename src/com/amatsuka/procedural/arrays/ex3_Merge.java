@@ -16,23 +16,7 @@ public class ex3_Merge implements RunnableExercise {
         int[] firstArray = Arrays.readIntegerArray(System.in);
         int[] secondArray = Arrays.readIntegerArray(System.in);
 
-        ArrayList<Integer> result = new ArrayList<>();
-
-        int index = 0;
-
-        while ((index < firstArray.length) || (index < secondArray.length)) {
-            if (index < firstArray.length) {
-                result.add(firstArray[index]);
-            }
-
-            if (index < secondArray.length) {
-                result.add(secondArray[index]);
-            }
-
-            index++;
-        }
-
-        System.out.println(Arrays.join(" ", result.stream().mapToInt(i -> i).toArray()));
+        System.out.println(Arrays.join(" ", Arrays.merge(firstArray, secondArray)));
 
     }
 

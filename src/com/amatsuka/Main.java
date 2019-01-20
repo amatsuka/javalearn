@@ -1,10 +1,10 @@
 package com.amatsuka;
 
-import com.amatsuka.procedural.arrays.ex3_Merge;
+import com.amatsuka.procedural.arrays.ex4_Linearize;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new ex3_Merge()).run();
+        (new ex4_Linearize()).run();
     }
 }
