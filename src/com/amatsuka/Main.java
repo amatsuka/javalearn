@@ -1,10 +1,10 @@
 package com.amatsuka;
 
-import com.amatsuka.procedural.arrays.ex1_Shifter;
+import com.amatsuka.procedural.arrays.ex2_RemoveRepeat;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new ex1_Shifter()).run();
+        (new ex2_RemoveRepeat()).run();
     }
 }

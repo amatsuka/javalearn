@@ -13,25 +13,7 @@ import java.util.Scanner;
 public class ex1_Shifter implements RunnableExercise {
     @Override
     public void run() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
-
-        ArrayList<Integer> input = new ArrayList<>();
-
-        String inputString = sc.nextLine();
-
-        for (String number : inputString.split(" ")) {
-            try {
-                input.add(Integer.parseInt(number));
-            } catch (NumberFormatException e) {
-                System.out.println("Не удалось прочитать как число " + number);
-            }
-        }
-
-        printAllShiftStatesOfArray(input.stream().mapToInt(i -> i).toArray());
-
-
+        printAllShiftStatesOfArray(Arrays.readIntegerArray(System.in));
     }
 
     private void printAllShiftStatesOfArray(final int[] array) {
