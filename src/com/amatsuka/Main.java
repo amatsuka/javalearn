@@ -1,10 +1,10 @@
 package com.amatsuka;
 
-import com.amatsuka.procedural.arrays.ex2_RemoveRepeat;
+import com.amatsuka.procedural.arrays.ex3_Merge;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new ex2_RemoveRepeat()).run();
+        (new ex3_Merge()).run();
     }
 }
