@@ -1,10 +1,10 @@
 package com.amatsuka;
 
-import com.amatsuka.procedural.strings.ex1_Palindrome;
+import com.amatsuka.procedural.strings.ex2_RomeDigits;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new ex1_Palindrome()).run();
+        (new ex2_RomeDigits()).run();
     }
 }
