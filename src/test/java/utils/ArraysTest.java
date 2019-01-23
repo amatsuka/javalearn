@@ -33,4 +33,14 @@ public class ArraysTest {
             System.setIn(stdin);
         }
     }
+
+    @Test
+    public void mergeTest() {
+        int[] firstArray = {1,2,3};
+        int[] secondArray = {4,5,6};
+
+        int[] expected = {1,4,2,5,3,6};
+
+        assertArrayEquals("Unexpected array", expected, Arrays.merge(firstArray, secondArray));
+    }
 }
