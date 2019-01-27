@@ -1,4 +1,4 @@
-package com.amatsuka.oop.classes.Ex1Point;
+package com.amatsuka.oop.classes.ex1Point;
 
 public class Point {
     private int x;

@@ -1,11 +1,11 @@
-package com.amatsuka.oop.classes.Ex2Car;
+package com.amatsuka.oop.classes.ex2Car;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Input;
 
 import java.io.InputStream;
 
-public class ex2_Car implements RunnableExercise {
+public class Ex2_Car implements RunnableExercise {
     @Override
     public void run() {
         InputStream inputStream = System.in;

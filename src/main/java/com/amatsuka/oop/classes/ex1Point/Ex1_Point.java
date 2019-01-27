@@ -1,4 +1,4 @@
-package com.amatsuka.oop.classes.Ex1Point;
+package com.amatsuka.oop.classes.ex1Point;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Arrays;
@@ -23,7 +23,7 @@ import java.io.InputStream;
 в переменной р должна быть установлена точка с координатами Point(8, 14), т.е. new Point(3, 4).translate(1, 3) == new Point(4, 7), а new Point(4, 7).scale(2) == Point(8, 14).\
  */
 
-public class ex1_Point implements RunnableExercise {
+public class Ex1_Point implements RunnableExercise {
     @Override
     public void run() {
         InputStream inputStream = System.in;

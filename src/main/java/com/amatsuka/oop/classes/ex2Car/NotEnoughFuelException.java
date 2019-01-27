@@ -1,4 +1,4 @@
-package com.amatsuka.oop.classes.Ex2Car;
+package com.amatsuka.oop.classes.ex2Car;
 
 public class NotEnoughFuelException extends Exception {
 }
