@@ -1,10 +1,10 @@
 package com.amatsuka;
 
-import com.amatsuka.procedural.strings.ex2_RomeDigits;
+import com.amatsuka.oop.classes.Ex1Point.ex1_Point;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new ex2_RomeDigits()).run();
+        (new ex1_Point()).run();
     }
 }

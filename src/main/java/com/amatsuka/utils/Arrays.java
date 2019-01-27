@@ -15,9 +15,13 @@ public class Arrays {
     }
 
     public static int[] readIntegerArray(InputStream stream) {
+        return readIntegerArray(stream, "Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
+    }
+
+    public static int[] readIntegerArray(InputStream stream, String message) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
+        System.out.println(message);
 
         String inputString = sc.nextLine();
 
