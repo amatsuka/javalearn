@@ -1,10 +1,6 @@
-package utils;
+package com.amatsuka.utils;
 
-import com.amatsuka.utils.Arrays;
-import com.amatsuka.utils.Dates;
 import org.junit.Test;
-
-import java.util.Date;
 
 import static org.junit.Assert.*;
 

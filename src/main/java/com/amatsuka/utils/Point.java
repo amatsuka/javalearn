@@ -1,4 +1,4 @@
-package com.amatsuka.oop.classes.ex1Point;
+package com.amatsuka.utils;
 
 public class Point {
     private int x;
@@ -26,7 +26,7 @@ public class Point {
         this.y = y;
     }
 
-    public int distance(Point point) {
+    public double distance(Point point) {
         /**
          * @TODO почему так можно обращаться к закрытым членам дугого объекта?
          * System.out.println(point.x);
@@ -39,7 +39,7 @@ public class Point {
         int otherX = point.getX();
         int otherY = point.getY();
 
-        return (int)Math.sqrt(Math.pow(otherX - selfX, 2) + Math.pow(otherY - selfY, 2));
+        return Math.sqrt(Math.pow(otherX - selfX, 2) + Math.pow(otherY - selfY, 2));
     }
 
     public Point translate(int distanceX, int distanceY) {

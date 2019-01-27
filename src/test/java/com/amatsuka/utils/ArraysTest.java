@@ -1,6 +1,5 @@
-package utils;
+package com.amatsuka.utils;
 
-import com.amatsuka.utils.Arrays;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;

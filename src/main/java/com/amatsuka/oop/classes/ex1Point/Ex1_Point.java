@@ -3,6 +3,7 @@ package com.amatsuka.oop.classes.ex1Point;
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Arrays;
 import com.amatsuka.utils.Input;
+import com.amatsuka.utils.Point;
 
 import java.io.InputStream;
 
