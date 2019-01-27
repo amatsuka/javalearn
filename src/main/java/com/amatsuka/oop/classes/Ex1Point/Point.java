@@ -27,8 +27,11 @@ public class Point {
     }
 
     public int distance(Point point) {
-        System.out.println(point.x);
-        System.out.println(point.y);
+        /**
+         * @TODO почему так можно обращаться к закрытым членам дугого объекта?
+         * System.out.println(point.x);
+         * System.out.println(point.y);
+         */
 
         int selfX = getX();
         int selfY = getY();
