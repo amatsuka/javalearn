@@ -13,6 +13,10 @@ public class Rectangle {
 
     private Point vertexD;
 
+    public Rectangle(Point A, Point C) throws InvalidRectagleVertexException {
+        this(A, new Point(A.getX(), C.getY()), C, new Point(C.getX(), A.getY()));
+    }
+
     public Rectangle(Point A, Point B, Point C, Point D) throws InvalidRectagleVertexException {
         if (!isRectangleVertexes(A, B, C, D)) {
             throw new InvalidRectagleVertexException();

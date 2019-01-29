@@ -15,17 +15,23 @@ import com.amatsuka.utils.Point;
 public class Ex1_Shapes implements RunnableExercise {
     @Override
     public void run() {
-
-
-
         try {
             Rectangle rectangle = new Rectangle(new Point(0, 0), new Point(0, 4), new Point(6, 4), new Point(6, 0));
+            Rectangle rectangle2 = new Rectangle(new Point(0, 0), new Point(6, 4));
 
-            System.out.println("Длина диагонали: " + rectangle.diagonalLength());
-            System.out.println("Площадь: " + rectangle.area());
+            System.out.println("Длина диагонали прямоугольника 1: " + rectangle.diagonalLength());
+            System.out.println("Площадь прямоугольника 1: " + rectangle.area());
+
+            System.out.println("Длина диагонали прямоугольника 2: " + rectangle2.diagonalLength());
+            System.out.println("Площадь прямоугольника 2: " + rectangle2.area());
         } catch (InvalidRectagleVertexException e) {
             e.printStackTrace();
         }
+
+        Circle circle = new Circle(0, 0, 10);
+
+        System.out.println("Площадь окружности: " + circle.area());
+
 
 
     }
