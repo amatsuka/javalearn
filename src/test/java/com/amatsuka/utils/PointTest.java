@@ -1,8 +1,7 @@
 package com.amatsuka.utils;
 
+import com.amatsuka.utils.geometry.Point;
 import org.junit.Test;
-
-import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
 

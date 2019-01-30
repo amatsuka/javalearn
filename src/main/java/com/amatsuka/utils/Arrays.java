@@ -58,4 +58,34 @@ public class Arrays {
         return result.stream().mapToInt(i -> i).toArray();
 
     }
+
+
+    public static int[] shiftRight(int[] array) {
+        int[] shiftedArray = new int[array.length];
+
+        shiftedArray[0] = array[array.length - 1];
+
+        for (int i = 0; i < array.length - 1; i++) {
+            shiftedArray[i + 1] = array[i];
+        }
+
+        return shiftedArray;
+    }
+
+    public static int[] unique(int[] array) {
+        ArrayList<Integer> processedValues = new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            Integer value = array[i];
+
+            if (!processedValues.contains(value)) {
+                result.add(value);
+            }
+
+            processedValues.add(value);
+        }
+
+        return result.stream().mapToInt(i -> i).toArray();
+    }
 }

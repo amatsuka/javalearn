@@ -1,7 +1,7 @@
 package com.amatsuka;
 
 
-import com.amatsuka.oop.encapsulation.ex1Shapes.Ex1_Shapes;
+import com.amatsuka.excercies.oop.encapsulation.ex1Shapes.Ex1_Shapes;
 
 public class Main {
 

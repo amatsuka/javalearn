@@ -42,4 +42,22 @@ public class ArraysTest {
 
         assertArrayEquals("Unexpected array", expected, Arrays.merge(firstArray, secondArray));
     }
+
+    @Test
+    public void shiftRightTest() {
+        int[] array = {1, 2, 3, 4, 5};
+
+        int[] expected = {5,1,2,3,4};
+
+        assertArrayEquals("Unexpected array", expected, Arrays.shiftRight(array));
+    }
+
+    @Test
+    public void uniqueTest() {
+        int[] array = {1, 2, 5, 3, 4, 5};
+
+        int[] expected = {1,2,5,3,4};
+
+        assertArrayEquals("Unexpected array", expected, Arrays.unique(array));
+    }
 }

@@ -1,5 +1,7 @@
 package com.amatsuka.utils;
 
+import com.amatsuka.utils.geometry.Point;
+import com.amatsuka.utils.geometry.Vector;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
