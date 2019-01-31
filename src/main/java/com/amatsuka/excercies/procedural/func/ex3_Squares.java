@@ -1,8 +1,10 @@
 package com.amatsuka.excercies.procedural.func;
 
 
-import java.util.Scanner;
 import com.amatsuka.contracts.RunnableExercise;
+import com.amatsuka.utils.Arithmetic;
+
+import java.util.Scanner;
 
 
 /*
@@ -24,13 +26,13 @@ public class ex3_Squares implements RunnableExercise {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        int d = discriminant(a, b, c);
+        int d = Arithmetic.discriminant(a, b, c);
 
-        if (!isPositive(d)) {
+        if (!Arithmetic.isPositive(d)) {
             System.out.println("Нет действительных корней");
         }
 
-        if (isZero(d)) {
+        if (Arithmetic.isZero(d)) {
             System.out.print("Уравнение имеет один корень " + ((-b)/(2*a)));
             System.out.println((-b)/(2*a));
         } else {
@@ -47,17 +49,4 @@ public class ex3_Squares implements RunnableExercise {
     public String description() {
         return "Написать программу, вычисляющую корни квадратного уравнения";
     }
-
-    private  int discriminant(final int a, final int b, final int c) {
-        return b^2 - 4*a*c;
-    }
-
-    private boolean isPositive(int number) {
-        return number > 0;
-    }
-
-    private boolean isZero(int number) {
-        return number == 0;
-    }
-
 }

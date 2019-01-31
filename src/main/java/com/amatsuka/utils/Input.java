@@ -17,4 +17,13 @@ public class Input {
     public static int readInt(InputStream inputStream) {
         return readInt(inputStream, "Введите целое число");
     }
+
+    public static String readString(InputStream inputStream, String message) {
+        System.out.println(message);
+        return makeScanner(inputStream).nextLine();
+    }
+
+    public static String readString(InputStream inputStream) {
+        return readString(inputStream, "Введите строку");
+    }
 }
