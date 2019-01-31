@@ -27,4 +27,20 @@ public class DatesTest {
         assertEquals(29, Dates.getMaxDayInMonth(2, 2000));
         assertEquals(28, Dates.getMaxDayInMonth(2, 1999));
     }
+
+    @Test
+    public void isHighYear() {
+    }
+
+    @Test
+    public void getMaxDayInMonth() {
+    }
+
+    @Test
+    public void getNextDayDate() {
+    }
+
+    @Test
+    public void getStringDate() {
+    }
 }

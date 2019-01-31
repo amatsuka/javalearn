@@ -14,30 +14,6 @@ public class Arrays {
                 .collect(Collectors.joining(separator));
     }
 
-    public static int[] readIntegerArray(InputStream stream) {
-        return readIntegerArray(stream, "Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
-    }
-
-    public static int[] readIntegerArray(InputStream stream, String message) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println(message);
-
-        String inputString = sc.nextLine();
-
-        ArrayList<Integer> input = new ArrayList<>();
-
-        for (String number : inputString.split(" ")) {
-            try {
-                input.add(Integer.parseInt(number));
-            } catch (NumberFormatException e) {
-                System.out.println("Не удалось прочитать как число " + number);
-            }
-        }
-
-        return input.stream().mapToInt(i -> i).toArray();
-    }
-
     public static int[] merge(int[] firstArray, int[] secondArray) {
         ArrayList<Integer> result = new ArrayList<>();
 

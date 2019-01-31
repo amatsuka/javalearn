@@ -2,6 +2,7 @@ package com.amatsuka.excercies.procedural.arrays;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Arrays;
+import com.amatsuka.utils.Input;
 
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class ex4_Linearize implements RunnableExercise {
         int[][] array = new int[size][];
 
         for (int i = 0; i < size; i++) {
-            array[i] = Arrays.readIntegerArray(System.in);
+            array[i] = Input.readIntegerArray(System.in);
         }
 
         System.out.println(Arrays.join(" ", linearize(array)));

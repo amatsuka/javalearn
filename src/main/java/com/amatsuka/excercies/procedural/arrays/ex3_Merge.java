@@ -2,6 +2,7 @@ package com.amatsuka.excercies.procedural.arrays;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Arrays;
+import com.amatsuka.utils.Input;
 
 
 /*
@@ -11,8 +12,8 @@ import com.amatsuka.utils.Arrays;
 public class ex3_Merge implements RunnableExercise {
     @Override
     public void run() {
-        int[] firstArray = Arrays.readIntegerArray(System.in);
-        int[] secondArray = Arrays.readIntegerArray(System.in);
+        int[] firstArray = Input.readIntegerArray(System.in);
+        int[] secondArray = Input.readIntegerArray(System.in);
 
         System.out.println(Arrays.join(" ", Arrays.merge(firstArray, secondArray)));
 

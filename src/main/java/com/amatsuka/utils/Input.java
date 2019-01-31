@@ -1,6 +1,7 @@
 package com.amatsuka.utils;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Input {
@@ -25,5 +26,29 @@ public class Input {
 
     public static String readString(InputStream inputStream) {
         return readString(inputStream, "Введите строку");
+    }
+
+    public static int[] readIntegerArray(InputStream stream) {
+        return readIntegerArray(stream, "Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
+    }
+
+    public static int[] readIntegerArray(InputStream stream, String message) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(message);
+
+        String inputString = sc.nextLine();
+
+        ArrayList<Integer> input = new ArrayList<>();
+
+        for (String number : inputString.split(" ")) {
+            try {
+                input.add(Integer.parseInt(number));
+            } catch (NumberFormatException e) {
+                System.out.println("Не удалось прочитать как число " + number);
+            }
+        }
+
+        return input.stream().mapToInt(i -> i).toArray();
     }
 }

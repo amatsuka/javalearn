@@ -18,22 +18,6 @@ public class ArraysTest {
     }
 
     @Test
-    public void readIntegerArrayTest() {
-        String input = "1 2 3 4 5\n";
-        int[] expected = {1,2,3,4,5};
-
-        InputStream mockInput = new ByteArrayInputStream(input.getBytes());
-        InputStream stdin = System.in;
-
-        try {
-            System.setIn(mockInput);
-            assertArrayEquals("Unexpected array", expected, Arrays.readIntegerArray(mockInput));
-        } finally {
-            System.setIn(stdin);
-        }
-    }
-
-    @Test
     public void mergeTest() {
         int[] firstArray = {1,2,3};
         int[] secondArray = {4,5,6};

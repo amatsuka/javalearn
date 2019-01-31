@@ -2,6 +2,7 @@ package com.amatsuka.excercies.procedural.arrays;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Arrays;
+import com.amatsuka.utils.Input;
 
 /*
 Напишите программу, которая циклически сдвигает элементы массива вправо на одну позицию, и печатает результат.
@@ -10,7 +11,7 @@ import com.amatsuka.utils.Arrays;
 public class ex1_Shifter implements RunnableExercise {
     @Override
     public void run() {
-        printAllShiftStatesOfArray(Arrays.readIntegerArray(System.in));
+        printAllShiftStatesOfArray(Input.readIntegerArray(System.in));
     }
 
     private void printAllShiftStatesOfArray(final int[] array) {

@@ -29,12 +29,12 @@ public class Ex1_Point implements RunnableExercise {
     public void run() {
         InputStream inputStream = System.in;
 
-        int[] firstCoordinates = Arrays.readIntegerArray(inputStream,"Введите координаты первой точки");
+        int[] firstCoordinates = Input.readIntegerArray(inputStream,"Введите координаты первой точки");
 
         Point point = new Point(firstCoordinates[0], firstCoordinates[1]);
         System.out.println(point);
 
-        int[] secondCoordinates = Arrays.readIntegerArray(inputStream,"Введите координаты второй точки");
+        int[] secondCoordinates = Input.readIntegerArray(inputStream,"Введите координаты второй точки");
 
         Point secondPoint = new Point(secondCoordinates[0],secondCoordinates[1]);
 
@@ -43,7 +43,7 @@ public class Ex1_Point implements RunnableExercise {
         Point p = point;
 
 
-        int[] shift = Arrays.readIntegerArray(inputStream,"Введите смещение");
+        int[] shift = Input.readIntegerArray(inputStream,"Введите смещение");
         System.out.println(p = p.translate(shift[0], shift[1]));
 
         int multiple = Input.readInt(inputStream, "Введите множитель");
