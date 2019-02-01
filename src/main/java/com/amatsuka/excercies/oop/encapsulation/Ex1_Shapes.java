@@ -1,10 +1,10 @@
-package com.amatsuka.excercies.oop.encapsulation.ex1Shapes;
+package com.amatsuka.excercies.oop.encapsulation;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.geometry.Point;
-import com.amatsuka.utils.geometry.Circle;
-import com.amatsuka.utils.geometry.Rectangle;
-import com.amatsuka.utils.geometry.exceptions.InvalidRectangleVertexException;
+import com.amatsuka.utils.geometry.exceptions.InvalidVertexException;
+import com.amatsuka.utils.geometry.shapes.circles.Circle;
+import com.amatsuka.utils.geometry.shapes.quadrilaterals.Rectangle;
 
 /*
 Продолжение задачи 1. Используя класс точки, создать класс Rectangle, описывающий прямоугольник, и класс Circle описывающий круг.
@@ -27,7 +27,7 @@ public class Ex1_Shapes implements RunnableExercise {
 
             System.out.println("Длина диагонали прямоугольника 2: " + rectangle2.diagonalLength());
             System.out.println("Площадь прямоугольника 2: " + rectangle2.area());
-        } catch (InvalidRectangleVertexException e) {
+        } catch (InvalidVertexException e) {
             e.printStackTrace();
         }
 
