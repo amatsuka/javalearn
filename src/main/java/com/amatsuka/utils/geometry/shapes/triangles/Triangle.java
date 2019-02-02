@@ -6,8 +6,7 @@ import com.amatsuka.utils.geometry.exceptions.InvalidVertexException;
 import com.amatsuka.utils.geometry.shapes.Polygon;
 
 public class Triangle extends Polygon {
-    public Triangle(Point A, Point B, Point C) throws InvalidVertexException {
-        super();
+    public Triangle(Point A, Point B, Point C) {
         setVertexes(A, B, C);
     }
 
@@ -30,19 +29,22 @@ public class Triangle extends Polygon {
     }
 
     @Override
-    protected boolean isValidVertexes() {
-        return false;
-    }
-
-    @Override
     public double area() {
-        //@TODO implement
+        double halfPerimeter = perimeter() / 2;
+
+        return Math.sqrt(halfPerimeter
+                * (halfPerimeter - getVertexA().distance(getVertexB()))
+                * (halfPerimeter - getVertexB().distance(getVertexC()))
+                * (halfPerimeter - getVertexC().distance(getVertexA()))
+        );
     }
 
     @Override
-    public double perimeter() {
-        return new Vector(getVertexA(), getVertexB()).length()
-                + new Vector(getVertexB(), getVertexC()).length()
-                + new Vector(getVertexC(), getVertexA()).length();
+    public String toString() {
+        return "Quadrilateral:("
+                + getVertexA() + ","
+                + getVertexB() + ","
+                + getVertexC()
+                +")";
     }
 }

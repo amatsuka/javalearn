@@ -4,11 +4,11 @@ import com.amatsuka.utils.geometry.Point;
 import com.amatsuka.utils.geometry.Vector;
 import com.amatsuka.utils.geometry.exceptions.InvalidVertexException;
 import com.amatsuka.utils.geometry.shapes.Polygon;
+import com.amatsuka.utils.geometry.shapes.triangles.Triangle;
 
-public abstract class Quadrilateral extends Polygon {
+public class Quadrilateral extends Polygon {
 
-    public Quadrilateral(Point A, Point B, Point C, Point D) throws InvalidVertexException {
-        super();
+    public Quadrilateral(Point A, Point B, Point C, Point D) {
         setVertexes(A, B, C, D);
     }
 
@@ -35,11 +35,19 @@ public abstract class Quadrilateral extends Polygon {
         return getVertex("D");
     }
 
+    public double area() {
+        Triangle triangleABC = new Triangle(getVertexA(), getVertexB(), getVertexC());
+        Triangle triangleADC = new Triangle(getVertexA(), getVertexD(), getVertexC());
+        return triangleABC.area() + triangleADC.area();
+    }
+
     @Override
-    public double perimeter() {
-        return new Vector(getVertexA(), getVertexB()).length()
-                + new Vector(getVertexB(), getVertexC()).length()
-                + new Vector(getVertexC(), getVertexD()).length()
-                + new Vector(getVertexD(), getVertexA()).length();
+    public String toString() {
+        return "Quadrilateral:("
+                + getVertexA() + ","
+                + getVertexB() + ","
+                + getVertexC() + ","
+                + getVertexD()
+                +")";
     }
 }

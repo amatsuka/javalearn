@@ -6,17 +6,12 @@ import com.amatsuka.utils.geometry.shapes.Shape;
 
 public class Parallelogram extends Quadrilateral {
 
-    public Parallelogram(Point A, Point B, Point C, Point D) throws InvalidVertexException {
+    public Parallelogram(Point A, Point B, Point C, Point D) {
         super(A, B, C, D);
     }
 
     @Override
-    protected boolean isValidVertexes() {
-        //@TODO implement
-    }
-
-    @Override
-    public double area() {
-        //@TODO implement
+    public String toString() {
+        return "Parallelogram:" + super.toString();
     }
 }
