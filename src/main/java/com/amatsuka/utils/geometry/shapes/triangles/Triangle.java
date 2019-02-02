@@ -41,7 +41,7 @@ public class Triangle extends Polygon {
 
     @Override
     public String toString() {
-        return "Quadrilateral:("
+        return "Triangle:("
                 + getVertexA() + ","
                 + getVertexB() + ","
                 + getVertexC()

@@ -26,4 +26,11 @@ public class Circle extends Point implements Shape {
     public double perimeter() {
         return 2 * PI * radius;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
 }
