@@ -15,17 +15,17 @@ public class Vector {
     }
 
     private int scalarMultiple(Vector vector) {
-        Point first = this.toOnePoint();
-        Point second = vector.toOnePoint();
+        Point first = this.toPoint();
+        Point second = vector.toPoint();
 
         return first.getX() * second.getX() + first.getY() * second.getY();
     }
 
-    private Point toOnePoint() {
-        return new Point(end.getX() - start.getX(), end.getY() - start.getY());
+    private Point toPoint() {
+        return new Point(this.end.getX() - this.start.getX(), this.end.getY() - this.start.getY());
     }
 
     public double length() {
-        return start.distance(end);
+        return this.start.distance(this.end);
     }
 }

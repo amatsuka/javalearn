@@ -16,16 +16,16 @@ public abstract class Polygon implements Shape {
     }
 
     protected void setVertex(String vertexLiteral, Point vertex) {
-        vertexes.put(vertexLiteral, vertex);
+        this.vertexes.put(vertexLiteral, vertex);
     }
 
     protected int vertexCount() {
-        return vertexes.size();
+        return this.vertexes.size();
     }
 
     public double perimeter() {
 
-        if (vertexes.size() < 2) {
+        if (this.vertexes.size() < 2) {
             return 0;
         }
 
@@ -49,6 +49,6 @@ public abstract class Polygon implements Shape {
     }
 
     private Iterator<Map.Entry<String, Point>> getVertexesIterator() {
-        return vertexes.entrySet().iterator();
+        return this.vertexes.entrySet().iterator();
     }
 }

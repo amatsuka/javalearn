@@ -11,7 +11,7 @@ public class Point {
     }
 
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(int x) {
@@ -19,7 +19,7 @@ public class Point {
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public void setY(int y) {
@@ -27,19 +27,7 @@ public class Point {
     }
 
     public double distance(Point point) {
-        /**
-         * @TODO почему так можно обращаться к закрытым членам дугого объекта?
-         * System.out.println(point.x);
-         * System.out.println(point.y);
-         */
-
-        int selfX = getX();
-        int selfY = getY();
-
-        int otherX = point.getX();
-        int otherY = point.getY();
-
-        return Math.sqrt(Math.pow(otherX - selfX, 2) + Math.pow(otherY - selfY, 2));
+        return Math.sqrt(Math.pow(point.getX() - this.x, 2) + Math.pow(point.getY() - this.y, 2));
     }
 
     public Point translate(int distanceX, int distanceY) {
@@ -52,6 +40,6 @@ public class Point {
 
     @Override
     public String toString() {
-        return "(" + x + "," + y + ')';
+        return "(" + this.x + "," + this.y + ')';
     }
 }

@@ -19,18 +19,18 @@ public class Circle extends Point implements Shape {
     }
 
     public double area() {
-        return PI * radius * radius;
+        return PI * this.radius * this.radius;
     }
 
     @Override
     public double perimeter() {
-        return 2 * PI * radius;
+        return 2 * PI * this.radius;
     }
 
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
+                "radius=" + this.radius +
                 '}';
     }
 }
