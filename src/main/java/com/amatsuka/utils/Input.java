@@ -33,7 +33,7 @@ public class Input {
     }
 
     public static int[] readIntegerArray(InputStream stream, String message) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(stream);
 
         System.out.println(message);
 

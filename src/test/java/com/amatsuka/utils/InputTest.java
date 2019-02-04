@@ -8,6 +8,10 @@ import java.io.InputStream;
 import static org.junit.Assert.assertArrayEquals;
 
 public class InputTest {
+    static final String STRING_INVITATION = "Введите строку";
+    static final String INTEGER_INVITATION = "Введите целое число";
+    static final String ARRAY_INVITATION = "Введите элементы массива через пробел. Для завершения ввода нажмите  Enter";
+
     @Test
     public void readIntegerArrayTest() {
         String input = "1 2 3 4 5\n";
@@ -18,9 +22,18 @@ public class InputTest {
 
         try {
             System.setIn(mockInput);
-            assertArrayEquals("Unexpected array", expected, Input.readIntegerArray(mockInput));
+            assertArrayEquals(expected, Input.readIntegerArray(mockInput));
         } finally {
             System.setIn(stdin);
         }
+    }
+
+    @Test
+    public void readIntTest() {
+    }
+
+
+    @Test
+    public void readStringTest() {
     }
 }

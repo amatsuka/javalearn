@@ -1,8 +1,10 @@
 package com.amatsuka.utils;
 
-public abstract class Arithmetic {
+public final class Arithmetic {
+    private Arithmetic() {}
+
     public static int discriminant(final int a, final int b, final int c) {
-        return b^2 - 4*a*c;
+        return b*b - 4*a*c;
     }
 
     public static boolean isPositive(int number) {

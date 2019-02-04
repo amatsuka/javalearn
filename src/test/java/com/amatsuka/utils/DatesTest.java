@@ -26,21 +26,19 @@ public class DatesTest {
         assertEquals(31, Dates.getMaxDayInMonth(1, 2000));
         assertEquals(29, Dates.getMaxDayInMonth(2, 2000));
         assertEquals(28, Dates.getMaxDayInMonth(2, 1999));
+        assertEquals(30, Dates.getMaxDayInMonth(9, 1999));
     }
 
     @Test
-    public void isHighYear() {
-    }
-
-    @Test
-    public void getMaxDayInMonth() {
-    }
-
-    @Test
-    public void getNextDayDate() {
+    public void getNextDayDateTest() {
+        assertEquals("10.11.2012", Dates.getNextDayDate(9, 11,2012));
+        assertEquals("29.2.2000", Dates.getNextDayDate(28, 2,2000));
+        assertEquals("1.3.2001", Dates.getNextDayDate(28, 2,2001));
+        assertEquals("1.1.2001", Dates.getNextDayDate(31, 12,2000));
     }
 
     @Test
     public void getStringDate() {
+        assertEquals("10.11.2012", Dates.getStringDate(10,11,2012));
     }
 }

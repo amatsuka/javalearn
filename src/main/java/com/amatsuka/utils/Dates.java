@@ -14,7 +14,8 @@ public abstract class Dates {
     }
 
     public static int getMaxDayInMonth(final int month, final int year) {
-        //Апрель, июнь, сентябрь, ноябрь - 30 дней       Февраль - 28 дней в обычный год, 29 дней в високосный
+        //Апрель, июнь, сентябрь, ноябрь - 30 дней
+        // Февраль - 28 дней в обычный год, 29 дней в високосный
 
         switch (month) {
             case 4:
