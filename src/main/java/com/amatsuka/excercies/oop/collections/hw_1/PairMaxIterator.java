@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.oop.collections.ex1_iterable_pair;
+package com.amatsuka.excercies.oop.collections.hw_1;
 
 import com.amatsuka.excercies.oop.generics.ex2_advancedpair.AdvancedPair;
 
