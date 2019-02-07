@@ -1,11 +1,11 @@
 package com.amatsuka;
 
 
-import com.amatsuka.excercies.oop.generics.ex3_Table.Ex3_Table;
+import com.amatsuka.excercies.oop.collections.ex1_iterable_pair.Ex;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new Ex3_Table()).run();
+        (new Ex()).run();
     }
 }
