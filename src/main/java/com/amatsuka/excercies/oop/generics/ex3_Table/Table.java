@@ -66,7 +66,7 @@ public class Table<K, V> {
                 continue;
             }
 
-            if (((Entry<K, V>)this.items[i]).getKey() == key) {
+            if (((Entry<K, V>)this.items[i]).getKey().equals(key)) {
                 return i;
             }
         }
