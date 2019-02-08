@@ -1,6 +1,6 @@
-package com.amatsuka.utils.car.exceptions;
+package com.amatsuka.utils.car;
 
-import com.amatsuka.utils.car.NotEnoughFuelException;
+import com.amatsuka.utils.car.exceptions.NotEnoughFuelException;
 
 public class Car {
     private double fuelLevel;

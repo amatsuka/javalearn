@@ -26,9 +26,9 @@ public class Ex implements RunnableExercise {
             System.out.println(max);
         }
 
-        /*for (Integer max : PairUtils.maxPairs(new AdvancedPair(1,2), new AdvancedPair(3,2), new AdvancedPair(1,5))) {
+        for (Object max : PairUtils.maxPairs(new AdvancedPair(1,2), new AdvancedPair(3,2), new AdvancedPair(1,5))) {
             System.out.println(max);
-        }*/
+        }
 
 
     }

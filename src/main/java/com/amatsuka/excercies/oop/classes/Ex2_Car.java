@@ -2,8 +2,8 @@ package com.amatsuka.excercies.oop.classes;
 
 import com.amatsuka.contracts.RunnableExercise;
 import com.amatsuka.utils.Input;
-import com.amatsuka.utils.car.exceptions.Car;
-import com.amatsuka.utils.car.NotEnoughFuelException;
+import com.amatsuka.utils.car.Car;
+import com.amatsuka.utils.car.exceptions.NotEnoughFuelException;
 
 import java.io.InputStream;
 
