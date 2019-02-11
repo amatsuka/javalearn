@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.oop.collections.hw_2;
+package com.amatsuka.excercies.collections.hw_2;
 
 import com.amatsuka.contracts.RunnableExercise;
 

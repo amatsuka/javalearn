@@ -1,6 +1,6 @@
-package com.amatsuka.excercies.oop.collections.hw_2;
+package com.amatsuka.utils.cars;
 
-import com.amatsuka.excercies.oop.collections.hw_2.cars.Car;
+import com.amatsuka.utils.cars.garagecars.Car;
 
 import java.util.HashMap;
 import java.util.List;

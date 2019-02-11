@@ -1,10 +1,11 @@
-package com.amatsuka.excercies.oop.collections.hw_2;
+package com.amatsuka.excercies.collections.hw_2;
 
 import com.amatsuka.contracts.RunnableExercise;
-import com.amatsuka.excercies.oop.collections.hw_2.cars.Car;
-import com.amatsuka.excercies.oop.collections.hw_2.cars.LowriderCar;
-import com.amatsuka.excercies.oop.collections.hw_2.cars.MuscleCar;
-import com.amatsuka.excercies.oop.collections.hw_2.cars.NoobsCar;
+import com.amatsuka.utils.cars.*;
+import com.amatsuka.utils.cars.garagecars.Car;
+import com.amatsuka.utils.cars.garagecars.LowriderCar;
+import com.amatsuka.utils.cars.garagecars.MuscleCar;
+import com.amatsuka.utils.cars.garagecars.NoobsCar;
 
 import static java.util.Arrays.asList;
 

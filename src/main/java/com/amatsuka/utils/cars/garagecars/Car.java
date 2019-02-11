@@ -1,6 +1,4 @@
-package com.amatsuka.excercies.oop.collections.hw_2.cars;
-
-import org.apache.commons.codec.digest.DigestUtils;
+package com.amatsuka.utils.cars.garagecars;
 
 public abstract class Car {
     private String model;

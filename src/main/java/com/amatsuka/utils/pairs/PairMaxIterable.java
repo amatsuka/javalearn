@@ -1,6 +1,6 @@
-package com.amatsuka.excercies.oop.collections.hw_1;
+package com.amatsuka.utils.pairs;
 
-import com.amatsuka.excercies.oop.generics.ex2_advancedpair.AdvancedPair;
+import com.amatsuka.excercies.generics.ex2_advancedpair.AdvancedPair;
 
 import java.util.Iterator;
 import java.util.List;

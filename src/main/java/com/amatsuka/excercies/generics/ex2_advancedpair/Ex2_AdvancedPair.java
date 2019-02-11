@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.oop.generics.ex2_advancedpair;
+package com.amatsuka.excercies.generics.ex2_advancedpair;
 
 import com.amatsuka.contracts.RunnableExercise;
 

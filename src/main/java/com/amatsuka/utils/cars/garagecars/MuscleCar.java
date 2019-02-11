@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.oop.collections.hw_2.cars;
+package com.amatsuka.utils.cars.garagecars;
 
 public class MuscleCar extends Car {
     public MuscleCar(String model, String manufacturer, int productionYear, String color, long cost) {

@@ -1,6 +1,6 @@
-package com.amatsuka.excercies.oop.generics.ex2_advancedpair;
+package com.amatsuka.excercies.generics.ex2_advancedpair;
 
-import com.amatsuka.excercies.oop.generics.ex1_pair.Pair;
+import com.amatsuka.excercies.generics.ex1_pair.Pair;
 
 public class AdvancedPair<E extends Comparable<E>> extends Pair<E> {
     public AdvancedPair(E first, E second) {

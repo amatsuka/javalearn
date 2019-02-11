@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.oop.generics.ex3_Table;
+package com.amatsuka.excercies.generics.ex3_Table;
 
 public class Entry<K, V> {
     private final K key;

@@ -1,7 +1,9 @@
-package com.amatsuka.excercies.oop.collections.hw_1;
+package com.amatsuka.excercies.collections.hw_1;
 
 import com.amatsuka.contracts.RunnableExercise;
-import com.amatsuka.excercies.oop.generics.ex2_advancedpair.AdvancedPair;
+import com.amatsuka.excercies.generics.ex2_advancedpair.AdvancedPair;
+import com.amatsuka.utils.pairs.PairMaxIterable;
+import com.amatsuka.utils.pairs.PairUtils;
 
 import static java.util.Arrays.asList;
 
