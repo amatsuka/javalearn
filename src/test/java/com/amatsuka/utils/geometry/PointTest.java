@@ -1,4 +1,4 @@
-package com.amatsuka.utils;
+package com.amatsuka.utils.geometry;
 
 import com.amatsuka.utils.geometry.Point;
 import org.junit.Test;

@@ -45,7 +45,7 @@ public class Input {
             try {
                 input.add(Integer.parseInt(number));
             } catch (NumberFormatException e) {
-                System.out.println("Не удалось прочитать как число " + number);
+                System.err.println("Не удалось прочитать как число " + number);
             }
         }
 
