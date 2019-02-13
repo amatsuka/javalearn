@@ -1,9 +1,8 @@
 package com.amatsuka.utils.pairs;
 
-import com.amatsuka.excercies.generics.ex2_advancedpair.AdvancedPair;
-
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PairMaxIterator<T extends Comparable<T>> implements Iterator<T> {
 
@@ -22,6 +21,10 @@ public class PairMaxIterator<T extends Comparable<T>> implements Iterator<T> {
 
     @Override
     public T next() {
+        if(this.cursor >= list.size()) {
+            throw new NoSuchElementException();
+        }
+
         return this.list.get(this.cursor++).max();
     }
 }

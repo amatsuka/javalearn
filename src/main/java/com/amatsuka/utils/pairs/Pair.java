@@ -1,4 +1,4 @@
-package com.amatsuka.excercies.generics.ex1_pair;
+package com.amatsuka.utils.pairs;
 
 public class Pair<E> {
     private E first;

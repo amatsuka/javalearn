@@ -1,6 +1,7 @@
 package com.amatsuka.excercies.generics.ex1_pair;
 
 import com.amatsuka.contracts.RunnableExercise;
+import com.amatsuka.utils.pairs.Pair;
 
 /*
 Реализуйте обобщенный класс Pair, позволяющий сохранять пару элементов типа Е.

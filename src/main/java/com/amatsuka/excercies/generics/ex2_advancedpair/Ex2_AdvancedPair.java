@@ -1,6 +1,7 @@
 package com.amatsuka.excercies.generics.ex2_advancedpair;
 
 import com.amatsuka.contracts.RunnableExercise;
+import com.amatsuka.utils.pairs.AdvancedPair;
 
 /*
 Видоизмените класс из предыдущего упражнения,

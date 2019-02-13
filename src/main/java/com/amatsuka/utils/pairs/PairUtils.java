@@ -1,7 +1,5 @@
 package com.amatsuka.utils.pairs;
 
-import com.amatsuka.excercies.generics.ex2_advancedpair.AdvancedPair;
-
 import static java.util.Arrays.asList;
 
 public final class PairUtils {
