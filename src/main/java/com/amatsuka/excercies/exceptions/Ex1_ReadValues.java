@@ -20,7 +20,7 @@ public class Ex1_ReadValues implements RunnableExercise {
         List<Double> input;
 
         try {
-            input = Input.readNumberArray(1D, System.in);
+            input = Input.readNumberArray(Double.class, System.in);
             System.out.println(input);
         } catch (NumberArrayFormatException e) {
             System.out.println(e);
