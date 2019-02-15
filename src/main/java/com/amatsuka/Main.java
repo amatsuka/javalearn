@@ -1,11 +1,11 @@
 package com.amatsuka;
 
 
-import com.amatsuka.excercies.collections.hw_2.Ex2_Car;
+import com.amatsuka.excercies.exceptions.Ex1_ReadValues;
 
 public class Main {
 
     public static void main(String[] args) {
-        (new Ex2_Car()).run();
+        (new Ex1_ReadValues()).run();
     }
 }
