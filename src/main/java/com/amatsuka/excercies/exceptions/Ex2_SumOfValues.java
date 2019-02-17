@@ -31,15 +31,15 @@ public class Ex2_SumOfValues implements RunnableExercise {
         return "метод public double sumOfValues()";
     }
 
-    private static double sumOfReadedValues() throws MotherOfAllException {
-        List<Double> list;
+    private static int sumOfReadedValues() throws MotherOfAllException {
+        List<Integer> list;
 
         try {
-            list = Input.readNumberArray(1D, System.in);
+            list = Input.readNumberArray(Integer.class, System.in);
         } catch (Throwable e) {
             throw new MotherOfAllException(e);
         }
 
-        return list.stream().reduce(0D, (Double a, Double b) -> a + b);
+        return list.stream().reduce(0, (a, b) -> a + b);
     }
 }

@@ -4,16 +4,12 @@ import com.amatsuka.Main;
 import com.amatsuka.contracts.RunnableExercise;
 
 import java.io.IOException;
-import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Consumer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 /*
@@ -34,13 +30,7 @@ public class Ex1_PushkinReader implements RunnableExercise {
 
             Map<Character, Integer> charsCount = this.calculateCharsCount(fileStream);
 
-            StringBuilder builder = new StringBuilder();
-            for (Map.Entry entry: charsCount.entrySet()) {
-
-                builder.append(entry.getKey() + ":" + entry.getValue() + '\n');
-            }
-
-            System.out.println(builder);
+            printMap(charsCount);
         } catch (IOException e) {
             System.err.println("Не удалось прочитать файл");
         }
@@ -71,6 +61,16 @@ public class Ex1_PushkinReader implements RunnableExercise {
     private void incrementMapForChar(Map<Character, Integer> map, Character ch) {
         Integer count = map.getOrDefault(ch, 0);
         map.put(ch, count + 1);
+    }
+
+    private void printMap(Map<Character, Integer> charsCount) {
+        StringBuilder builder = new StringBuilder();
+        for (Map.Entry entry: charsCount.entrySet()) {
+
+            builder.append(entry.getKey() + ":" + entry.getValue() + '\n');
+        }
+
+        System.out.println(builder);
     }
 
     @Override

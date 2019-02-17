@@ -59,23 +59,20 @@ public class Input {
         return input.stream().mapToInt(i -> i).toArray();
     }
 
-    public static  <T extends Number> List<T> readNumberArray(T type, InputStream stream) {
+    public static  <T extends Number> List<T> readNumberArray(Class<T> type, InputStream stream) {
         return readNumberArray(type, stream, "Введите элементы массива через пробел. Для завершения ввода нажмите  Enter");
     }
 
-    public static <T extends Number> List<T> readNumberArray(T type, InputStream stream, String message) {
+    public static <T extends Number> List<T> readNumberArray(Class<T> type, InputStream stream, String message) {
         Scanner sc = new Scanner(stream);
 
-        ParseStrategy parseStrategy = parseStrategyFactory(type);
+        ParseStrategy<T> parseStrategy = parseStrategyFactory(type);
 
         System.out.println(message);
 
         String inputString = sc.nextLine();
 
-        /**
-         * @TODO Спросить ещё раз про типы в generic method
-         */
-        List<Number> input = new ArrayList<>();
+        List<T> input = new ArrayList<>();
         List<String> notReadedNumbers = new LinkedList<>();
 
         for (String number : inputString.split(" ")) {
@@ -90,24 +87,24 @@ public class Input {
             throw new NumberArrayFormatException(notReadedNumbers);
         }
 
-        return (List<T>)input;
+        return input;
     }
 
-    private static ParseStrategy parseStrategyFactory(Number type) throws ParseStrategyNotFoundException {
-        if (type instanceof Integer) {
-            return new IntegerParseStrategy();
+    private static<T extends Number> ParseStrategy<T> parseStrategyFactory(Class<T> type) throws ParseStrategyNotFoundException {
+        if (type.equals(Integer.class)) {
+            return (ParseStrategy<T>) new IntegerParseStrategy();
         }
 
-        if (type instanceof Double) {
-            return new DoubleParseStrategy();
+        if (type.equals(Double.class)) {
+            return (ParseStrategy<T>) new DoubleParseStrategy();
         }
 
-        /**
-         * @TODO лучше это делать checked или unchecked exception?
-         */
         throw new ParseStrategyNotFoundException();
     }
 
+    /**
+     * @TODO перенести в отдельный пакет и разнести по файлам
+     */
     interface ParseStrategy<T extends Number> {
         T parse(String value) throws NumberFormatException;
     }
