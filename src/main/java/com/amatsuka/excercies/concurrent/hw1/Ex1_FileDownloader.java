@@ -24,6 +24,7 @@ public class Ex1_FileDownloader implements RunnableExercise {
 
         for (String fileUrl : filesToDownload) {
             CompletableFuture<InputStream> future = CompletableFuture.supplyAsync(new FileDownloader(fileUrl), executor);
+
             future.thenApply(Ex1_FileDownloader::saveFile).thenAccept(FileDownloader::closeStream);
         }
 
