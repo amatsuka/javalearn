@@ -3,6 +3,7 @@ package com.amatsuka;
 
 import com.amatsuka.excercies.concurrent.hw1.Ex1_FileDownloader;
 import com.amatsuka.excercies.concurrent.hw1.Ex2_PriorityAndParams;
+import com.amatsuka.excercies.concurrent.hw2.Ex1_RandomList;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -14,7 +15,7 @@ public class Main {
     public static final String RESOURCES = "src/main/resources";
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        (new Ex1_FileDownloader()).run();
+        (new Ex1_RandomList()).run();
 
        /* CompletableFuture<String> future1
                 = CompletableFuture.supplyAsync(() -> "Hello");
