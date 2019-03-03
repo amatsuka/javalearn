@@ -12,7 +12,7 @@ import java.util.*;
 public class Ex1_FindStringWithMaxLetters implements RunnableExercise {
     @Override
     public void run() {
-        List<String> list = genererateList(20);
+        List<String> list = generateList(20);
 
         list.forEach(System.out::println);
 
@@ -24,7 +24,7 @@ public class Ex1_FindStringWithMaxLetters implements RunnableExercise {
         maxLetterString.ifPresentOrElse(System.out::println, () -> System.out.println("Список пуст"));
     }
 
-    private List<String> genererateList(int size) {
+    private List<String> generateList(int size) {
         Faker faker = new Faker();
         Random random = new Random();
 
