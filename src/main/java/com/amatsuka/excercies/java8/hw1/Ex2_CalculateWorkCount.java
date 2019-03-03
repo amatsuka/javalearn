@@ -4,6 +4,7 @@ import com.amatsuka.contracts.RunnableExercise;
 import com.github.javafaker.Faker;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /*
 Пусть дан поток, элементы которого - слова. Посчитайте, сколько раз встречается каждое слово.
@@ -17,13 +18,8 @@ public class Ex2_CalculateWorkCount implements RunnableExercise {
 
         list.forEach(System.out::println);
 
-        Map<String, Integer> result = list.stream().reduce(new HashMap<>(), (map, word) -> {
-            map.computeIfPresent(word, (k, v) -> ++v);
-            map.putIfAbsent(word, 1);
-
-            return map;
-
-        }, (hash1, hash2) -> hash1);
+        //TODO Найти фукцию заменить word -> word
+        Map<String, Long> result = list.stream().collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 
         System.out.println(result);
 
