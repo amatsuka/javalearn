@@ -23,7 +23,7 @@ public class Ex1_RandomList implements RunnableExercise {
         ConcurrentRandomList list = new ConcurrentRandomList();
 
         //Comment it out if you want to have fun
-        //list.setFunnyMode(true);
+        list.setFunnyMode(true);
 
 
         Runnable writer = () -> {
